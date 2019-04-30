@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form26</title>
+</head>
+<body>
+<header>Register Page</header>
+<a href="index.html">Tables Page</a>
+<form>
+	<label for="message">Tell Me Everything</label>
+	<textarea cols="50" rows="10"></textarea><br>
+	<input list="cars"/>
+	<datalist id="cars">
+		<option value="BMW"/>
+		<option value="Ford"/>
+		<option value="Volvo"/>
+		<option value="Skoda"/>
+		<option value="Toyota"/>
+		<option value="Multiple"/>
+		
+	</datalist> <br>
+	<select name="country" id="country">
+		<optgroup label="Europe">
+			<option value="UK">UK</option>
+			<option value="Germany">Germany</option>
+			<option value="France">France</option>
+		</optgroup>
+		<optgroup label="North America">
+			<option value="usa">USA</option>
+			<option value="canada">Canada</option>
+		</optgroup>
+	</select><br>
+	<input name="submit" type="submit" value="save"/>
+</form>
+
+</body>
+</html>
