@@ -1,0 +1,37 @@
+<!--Adding Integers
+Write a program sum.html that reads a sequence of integers from promt method, and reports their sum.
+Example:
+If you have the following numbers (this is one single input):
+10 15 16 -7 102 345
+
+then it should report:
+	481
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sum of integers</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let userInput = prompt("Input few numbers seperated by space. i.e. 5 -2 10");
+    let userInputArray = userInput.split(" ");
+    console.log('userInputArray', userInputArray);
+
+    //  using for loop
+    let sum = 0;
+    for (let i = 0; i < userInputArray.length; i++) {
+        sum += Number(userInputArray[i]); // converting string to number using Number Object.
+        //sum += parseInt(userInputArray[i], 10);  // converting string to number with parseInt
+    }
+    console.log('The Sum of Array is : ' + sum);
+
+</script>
+
+</html>

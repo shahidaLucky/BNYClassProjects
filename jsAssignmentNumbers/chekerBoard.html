@@ -1,0 +1,67 @@
+<!--Task B. Checkerboard
+Write a program checkerboard.html that asks the user to input width and height and prints a rectangular checkerboard of the requested size using asterisks and spaces (alternating).
+Example:
+Input width: 11
+Input height: 6
+
+Shape:
+* * * * * *
+ * * * * * 
+* * * * * *
+ * * * * *
+* * * * * *
+ * * * * *
+
+Hint:
+You used nested loops in the previous task that looked probably like
+for (var row = 0; row < height; row++) {
+    for (var col = 0; col < width; col++) {
+        ...
+    }
+}
+Inside the loops, you can add an if statement that will be conditionally printing asterisk * or (space) depending on the coordinates row and col.
+Again create the shape inside a string variable and the print the variable-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CheckerBoard</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let height = prompt("please enter the height: ");// ask the user to enter height
+    let width = prompt("please enter the width: ");// ask the user to enter width
+    let borderLine = "";// initialize BoardLine.
+    let board = "";
+    for (let rows = 1; rows <= height; rows++) {
+        borderLine="";
+        for (let columns = 1; columns <= width; columns ++) {
+            if(rows%2==1){
+                 if (columns % 2 == 1) {                    // if row is odd number then
+                borderLine += "*";
+            } else {
+                borderLine += "0";
+            }
+          }else{
+              if(columns%2==1){
+                borderLine += "0";
+              }else{
+                  borderLine += "*";
+              }   
+          }  
+        }
+          board += borderLine + "\n";
+       
+    }
+     //document.write('*');
+     console.log(board);
+
+
+</script>
+
+</html>

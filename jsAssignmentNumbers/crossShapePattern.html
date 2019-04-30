@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-98">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cross Shape</title>
+</head>
+
+<body>
+    <h1>Cross Shape Pattern</h1>
+</body>
+<script>
+    let size = 8;
+
+    document.write("<pre>")
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            if (i == j || i + j == 8 - 1) {
+                document.write("*");
+            } else {
+                document.write(" ");
+            }
+        }
+        document.write("<br />");
+    }
+    document.write("</pre>")
+
+
+</script>
+
+</html>

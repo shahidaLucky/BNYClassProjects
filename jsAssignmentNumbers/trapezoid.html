@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trapezoid</title>
+</head>
+
+<body>
+    <h1>Trapezoid</h1>
+</body>
+<script>
+    let height = 5;
+    let width = 12;
+    let widthRef = width;
+    document.write("<pre>");
+    for (let i = 1; i <= height; i++) {
+        let distanceFromInitialWidth = widthRef - width; // i.e. on third line 6
+        for (let r = 0; r < distanceFromInitialWidth; r += 2) {
+            document.write(" ");
+        }
+        for (let j = 0; j <= width; j++) {
+            document.write("*");
+        }
+        for (let r = 0; r < distanceFromInitialWidth; r += 2) {
+            document.write(" ");
+        }
+
+        width = width - 2;
+        document.write('<br />');
+    }
+    document.write("</pre>")
+
+
+    // document.write("<pre>");
+    // for (let i = 1; i <= 12; i++) {
+    //     for (let k = 1; k < (i * 2); k++) {
+    //         document.write(" ");
+    //     }
+    //     for (let j = 12; j >= i; j--) {
+    //         document.write("*");
+    //     }
+    //     document.write('<br />');
+    // }
+    // document.write("</pre>")
+</script>
+
+</html>
