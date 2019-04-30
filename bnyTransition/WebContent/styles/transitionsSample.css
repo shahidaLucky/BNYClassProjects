@@ -1,0 +1,59 @@
+@charset "ISO-8859-1";
+.box{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 5px solid lightskyblue;
+	transition: background-color 2s linear 2s; 
+}
+
+.box:hover{
+	background-color: lightskyblue;
+}
+
+.box1{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	border: 5px solid lightskyblue;
+	/*transition: background-color 2s linear 2s;*/
+	transition-property:  background-color, border, height, width;
+	transition-duration: 2s;
+}
+
+.box1:hover{
+	width: 150px;
+	height: 60px;
+	background-color: lightskyblue;
+	border: 5px dashed red;
+	background-color: lightskyblue;
+}
+
+.box2{
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	font-size: 20px;
+	left:  0px;
+	top:   0px;
+	position:   absolute;
+	transition-property: width height background-color font-size left top transform-color;
+	transition-duration:  0.5s;
+	transition-timing-function:  ease-in-out;
+
+}
+
+.box2:hover{
+	transform: rotate(270deg);
+	width: 50px;
+	height: 50px;
+	background-color: blue;
+	color: yellow;
+	font-size: 18px;
+	left: 25px;
+	top: 10px;
+	position: absolute;
+	transition-property: width height background-color font-size left top transform color;
+	transition-duration:  0.5s;
+	transition-timing-function:  ease-in-out;
+}
