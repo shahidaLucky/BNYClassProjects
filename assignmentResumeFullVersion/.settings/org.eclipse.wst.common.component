@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="assignmentResumeFullVersion">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="assignmentResumeFullVersion"/>
+        <property name="java-output-path" value="/assignmentResumeFullVersion/build/classes"/>
+    </wb-module>
+</project-modules>
