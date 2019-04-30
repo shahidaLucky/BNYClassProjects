@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+.fadeInDown{
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+	animation-duration: 5s;
+	width: 100px;
+	height: 100px;
+	background-color: pink;
+    text-align: center;
+}
+
+@keyframes fadeInDown{
+	from{
+	opacity: 0;
+	-webkit-tansform: translate3d(20%, 100%, 0);
+	transform: translate3d(0, -100%, 0);
+	}
+	to{
+	opacity: 1;
+	-webkit-tansform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	}
+}
