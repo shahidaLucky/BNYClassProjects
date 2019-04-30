@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<!-- CSS Styles -->
+		
+		<style type="text/css">
+		body {
+         background-color: #141414;
+         font-family: sans-serif;
+         color: gray;
+       }
+       
+	h1, h2, h3, h4, h5, h6 {
+	    margin: 0;
+	}
+	
+	/* Header section */
+	header {
+	    width: 60%;
+	    margin: 0 auto;
+	    padding: 5px;
+	    text-align: right;
+	}
+	
+	.social_icon {
+	    padding: 0 5px;
+	    color: #383838;
+	}
+	
+	.social_icon:hover {
+	    color: gray;
+	}
+	
+	/* End of Header Section */
+       #main_content {
+         background-color: #282828;
+         width: 60%;
+         margin: 0 auto;
+         padding: 20px;
+      }
+
+     /* Basic Info Block */
+
+     #basic_info_container {
+         display: flex;
+         justify-content: space-between;
+      }
+
+    .name_image_container {
+         display: flex;
+       }
+
+      .name_image_container .profile_image, .name_image_container .name_header {
+         margin: 10px;
+        }
+
+      .name_header .title {
+	    margin: 1px;
+	    font-size: 24px;
+	    font-weight: bold;
+	    color: white;
+     }
+
+	.name_header .position {
+	    margin: 1px;
+	    font-size: 18px;
+	    font-weight: bold;
+	    color: #45A6D8;
+	}
+	
+	.profile_image {
+	    width: 100px;
+	    height: 100px;
+	    border: 2px solid gray;
+	}
+	
+	.description {
+	    padding: 15px;
+	}
+	
+	.employee_details {
+	    display: flex;
+	}
+	
+	.employee_details span:first-child {
+	    color: white;
+	    text-align: right;
+	    width: 120px;
+	}
+	
+	.employee_details span:nth-child(2) {
+	    margin-left: 5px;
+	}
+	
+	#sub_content {
+	    display: flex;
+	    justify-content: space-between;
+	    margin: 40px 10px;
+	    padding: 15px;
+	}
+	
+	.sub_content_title {
+	    display: block;
+	    background-color: #373737;
+	    width: 400px;
+	}
+	
+	.sub_content_title i {
+	    font-size: 20px;
+	    height: 20px;
+	    width: 20px;
+	    padding: 2px;
+	    text-align: center;
+	    color: white;
+	}
+	
+	.sub_content_title span {
+	    margin-left: 10px;
+	    color: white;
+	    font-weight: bold;
+	}
+	
+	.employment i {
+	    background-color: #50A5CD;
+	}
+	
+	.history_header {
+	    display: flex;
+	}
+	.history_header h2 {
+	    font-size: 1.2em;
+	}
+	
+	.history_header_container {
+	    display: flex;
+	    justify-content: space-between;
+	    margin: 10px 5px;
+	    padding: 5px;
+	}
+	
+	.history_header i {
+	    background-color: #45A6D8;
+	    width: 15px;
+	    height: 15px;
+	    border-radius: 25px;
+	    color: white;
+	    text-align: center;
+	    padding: 2px;
+	}
+	
+	.history_header div:nth-child(2) {
+	    margin-left: 10px;
+	}
+	
+	.history_header h2 {
+	    color: white;
+	}
+	
+	.education i {
+	    background-color: #6CA633;
+	}
+	
+	aside {
+	    width: 150px !important;
+	    margin-left: 10px;
+	}
+	
+	.skill{
+	    margin-top: 20px;
+	}
+	
+	.skill .title {
+	    margin-bottom: 10px;
+	    color: white;
+	    text-transform: uppercase;
+	}
+	
+	progress {
+	    border-radius: 2px;
+	    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+	    background-size: 35px 20px, 100% 100%, 100% 100%;
+	    text-align: center;
+	}
+	progress::-moz-progress-bar {
+	    border-radius: 2px;
+	    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+	    background-size: 35px 20px, 100% 100%, 100% 100%;
+	}
+	
+	progress[value="90"]::-webkit-progress-value {
+	    background-color: #2C7EA4;
+	}
+	
+	progress[value="90"]::-moz-progress-bar {
+	    background-color: #2C7EA4;
+	}
+	
+	progress[value="80"]::-webkit-progress-value {
+	    background-color: #44A5D2;
+	}
+	
+	progress[value="80"]::-moz-progress-bar {
+	    background-color: #44A5D2;
+	}
+	
+	progress[value="93"]::-webkit-progress-value {
+	    background-color: #69A333;
+	}
+	
+	progress[value="93"]::-moz-progress-bar {
+	    background-color: #69A333;
+	}
+	
+	progress[value="88"]::-webkit-progress-value {
+	    background-color: #FDBE27;
+	}
+	
+	progress[value="88"]::-moz-progress-bar {
+	    background-color: #FDBE27;
+	}
+	
+	progress[value="85"]::-webkit-progress-value {
+	    background-color: #ED2E03;
+	}
+	
+	progress[value="85"]::-moz-progress-bar {
+	    background-color: #ED2E03;
+	}
+	
+	.skill .application_name{
+	    font-size: 14px;
+	}
+	
+	.graphic_skill i{
+	    width: 10px;
+	    height: 10px;
+	    display: inline-block;
+	    margin-right: 5px;
+	}
+	.graphic_skill i.photoshop{
+	    background-color: #2C7EA4;
+	}
+	.graphic_skill i.illustrator{
+	    background-color: #44A5D2;
+	}
+	
+	.graphic_skill i.indesign {
+	    background-color: #69A333;
+	}
+	
+	.graphic_skill i.coreldraw{
+	    background-color: #FDBE27;
+	}
+	
+	.graphic_skill i.max{
+	    background-color: #ED2E03;
+	}
+	
+	.lang_skill .lang_name{
+	    font-size: 14px;
+	    width: 50px;
+	    display: inline-block;
+	}
+	
+	.lang_skill .circle{
+	    border-radius: 50px;
+	    border: 1px solid #363636;
+	    width: 12px;
+	    height: 12px;
+	    display: inline-block;
+	}
+	
+	.lang_skill .english .circle:nth-child(-n+5){
+	    background-color: #44A5D2;
+	}
+	
+	.lang_skill .french .circle:nth-child(-n+4){
+	    background-color: #FDBE27;
+	}
+	
+	.lang_skill .spanish .circle:nth-child(-n+5){
+	    background-color: #ED2E03;
+	}
+  </style>
+</head>
+	<body>
+	<section id="main_content">
+    <article>
+        <div id="basic_info_container">
+            <div class="name_image_container">
+                <img src="profile_image.jpg" alt="Shahida Lucky" class="profile_image">
+                <div class="name_header">
+                    <h1 class="title">Shahida Lucky</h1>
+                    <h4 class="position">Application Engineer I</h4>
+                </div>
+            </div>
+            <div class="employee_details_container">
+                <div class="employee_details">
+                    <span>Name:</span><span>Shahida Lucky</span>
+                </div>
+                <div class="employee_details">
+                    <span>Address:</span><span>Bronx, NY 10460, USA</span>
+                </div>
+                <div class="employee_details">
+                    <span>Phone:</span><span>+1-541-745-3010</span>
+                </div>
+                <div class="employee_details">
+                    <span>Website:</span><span><a href="https://shahidalucky.io">https://shahidalucky.io</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, tenetur? Ratione vel distinctio
+            consectetur debitis iste a quo autem quam quod dolorum ad rerum eum, nemo amet earum. Fugit, fuga!
+        </div>
+    </article>
+    <hr>
+    <article id="sub_content">
+        <section class="sub_content">
+            <div class="sub_content_title employment">
+                <i class="fas fa-angle-down"></i><span>Employment</span>
+            </div>
+            <div class="employment_history_container">
+                <div class="history_header_container">
+                    <div class="history_header">
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div>
+                            <h2>There are many variation of passages</h2>
+                            <h5>Director Of Department</h5>
+                        </div>
+                    </div>
+                    <div>
+                        2003-2005
+                    </div>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                    tristique metus porta vehicula bibendum.Maecenas dictum
+                    vestibulum lobortis.Ut placerat leo sit amet odio posuere, id
+                    scelerisque nisi bibendum. Nulla vel ex finibus, imperdiet metus in,
+                    faucibus tellus. Vestibulum ornare augue in augue tempor rutrum.
+                    Vivamus molestie scelerisque porttitor. Sed elementum sapien non quam
+                    cursus posuere.
+                </p>
+            </div>
+            <hr>
+            <div class="employment_history_container">
+                <div class="history_header_container">
+                    <div class="history_header">
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div>
+                            <h2>Cooper Union</h2>
+                            <h5>Programmer</h5>
+                        </div>
+                    </div>
+                    <div>
+                        2005-Present
+                    </div>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                    tristique metus porta vehicula bibendum.Maecenas dictum
+                    vestibulum lobortis.Ut placerat leo sit amet odio posuere, id
+                    scelerisque nisi bibendum. Nulla vel ex finibus, imperdiet metus in,
+                    faucibus tellus. Vestibulum ornare augue in augue tempor rutrum.
+                    Vivamus molestie scelerisque porttitor. Sed elementum sapien non quam
+                    cursus posuere.
+                </p>
+            </div>
+
+            <div class="sub_content_title education">
+                <i class="fas fa-angle-down"></i><span>Education</span>
+            </div>
+
+            <div class="employment_history_container">
+                <div class="history_header_container">
+                    <div class="history_header">
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div>
+                            <h2>Lorem Header Quick</h2>
+                            <h5>Web Design</h5>
+                        </div>
+                    </div>
+                    <div>
+                        1999-2004
+                    </div>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                    tristique metus porta vehicula bibendum.Maecenas dictum
+                    vestibulum lobortis.Ut placerat leo sit amet odio posuere, id
+                    scelerisque nisi bibendum. Nulla vel ex finibus, imperdiet metus in,
+                    faucibus tellus. Vestibulum ornare augue in augue tempor rutrum.
+                    Vivamus molestie scelerisque porttitor. Sed elementum sapien non quam
+                    cursus posuere.
+                </p>
+            </div>
+            <div class="employment_history_container">
+                <div class="history_header_container">
+                    <div class="history_header">
+                        <div>
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <div>
+                            <h2>Lorem Ipson Quick Brown</h2>
+                            <h5>Graphic Designer</h5>
+                        </div>
+                    </div>
+                    <div>
+                        2004-2006
+                    </div>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+                    tristique metus porta vehicula bibendum.Maecenas dictum
+                    vestibulum lobortis.Ut placerat leo sit amet odio posuere, id
+                    scelerisque nisi bibendum. Nulla vel ex finibus, imperdiet metus in,
+                    faucibus tellus. Vestibulum ornare augue in augue tempor rutrum.
+                    Vivamus molestie scelerisque porttitor. Sed elementum sapien non quam
+                    cursus posuere.
+                </p>
+            </div>
+
+        </section>
+        <aside>
+            <div class="programming_skill skill">
+                <h5 class="title">Programming Skill</h5>
+                <h6>Wordpress</h6>
+                <progress max="100" value="90"></progress>
+                <h6>PHP</h6>
+                <progress max="100" value="80" class="progress_bar_php"></progress>
+                <h6>Html</h6>
+                <progress max="100" value="93" class="progress_bar_html"></progress>
+                <h6>CSS</h6>
+                <progress max="100" value="88" class="progress_bar_css"></progress>
+                <h6>Mysql</h6>
+                <progress max="100" value="85" class="progress_bar_mysql"></progress>
+            </div>
+            <div class="graphic_skill skill">
+                <h5 class="title">Graphic Skill</h5>
+                <div>
+                    <i class="photoshop"></i><span class="application_name">Adobe Photoshop</span>
+                </div>
+                <div>
+                    <i class="illustrator"></i><span class="application_name">Adobe Illustrator</span>
+                </div>
+                <div>
+                    <i class="indesign"></i><span class="application_name">Adobe InDesign</span>
+                </div>
+                <div>
+                    <i class="coreldraw"></i><span class="application_name">CorelDraw</span>
+                </div>
+                <div>
+                    <i class="max"></i><span class="application_name">3D Max</span>
+                </div>
+            </div>
+            <div class="lang_skill skill">
+                <h5 class="title">Language Skill</h5>
+                <div class="english">
+                    <span class="lang_name">English</span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="french">
+                    <span class="lang_name">French</span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+                <div class="spanish">
+                    <span class="lang_name">Spanish</span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+            </div>
+        </aside>
+    </article>
+</section>
+</body>
+	</body>
+</html>
