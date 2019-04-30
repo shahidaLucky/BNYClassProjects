@@ -1,0 +1,23 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Hands On</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body ng-app>
+
+    <p>Try Leaving the name input field blank:</p>
+    <form name="myForm">
+        <p>
+            Name:
+            <input type="text" name="myName" ng-model="myName" required>
+            <span ng-show="myForm.myName.$touched && myForm.myName$invalid">The name is requires.</span>
+        </p>
+    </form>
+    <p>We use the ng-show directive to show the error message if the field has been touched AND is empty</p>
+</body>

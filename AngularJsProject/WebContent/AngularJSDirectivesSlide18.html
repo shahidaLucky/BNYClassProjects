@@ -1,0 +1,22 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expression Demo</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body>
+    <h1>ng-app Directives: </h1>
+     // will not work
+    <div>{{2/2}}</div> //only these two works because we cannot use multiple ng-app in one file
+    <div ng-app id="myDiv">{{5/2}}
+        <div>{{3*4}}</div>
+    </div>
+    // will not work
+    <div ng-app>{{3/2}}</div> 
+</body>
+
+</html>

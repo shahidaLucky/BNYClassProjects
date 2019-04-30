@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Hands On Exercise5</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="studentController">
+    <h3>Hands On Exercise 5 </h3>
+    <h2>Student Form</h2>
+    <form name="myForm" ng-submit="submitStudentForm()">
+        <table>
+            <tr>
+                <td>Enter ID Number: </td>
+                <td>
+                    <input type="number" name="myId" ng-model="newStudent.myId" required>
+                    <span ng-show="myForm.myId.$error.required"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td>
+                    <input type="text" name="myName" ng-model="newStudent.myName" required>
+                    <span ng-show="myForm.myName.$error.required"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td>
+                    <input type="email" name="myEmail" ng-model="newStudent.myEmail" required>
+                    <span ng-show="myForm.myEmail.$error.required">Invalid Email</span>
+                </td>
+            </tr>
+        </table>
+        <button ng-click="resetForm()">Submit</button><br><br>
+    <button>Reset</button>
+    </form><br>
+    
+</body>
+<script>
+    var app = angular.module("myApp", []);
+
+    app.controller("studentController", function ($scope) {
+        $scope.originalStudent = {
+            id: 1,
+            name: 'James Gosling',
+            email: 'jgosling@java.org'
+        }
+        $scope.newStudent = {
+            id: $scope.originalStudent.id,
+            name: $scope.originalStudent.name,
+            email: $scope.originalStudent.email
+
+        }
+        $scope.submitStudentForm = function () {
+            alert('myId: ' +$scope.newStudent.id+
+            '\nname: '+$scope.newStudent.name+
+            '\nemail: '+$scope.newStudent.email)
+
+        };
+        $scope.resetForm= function(){
+            $scope.newStudent.id = $scope.originalStudent.id;
+            $scope.newStudent.name = $scope.originalStudent.name;
+            $scope.newStudent.email = $scope.originalStudent.email;
+        };
+    });
+</script>
+
+</html>

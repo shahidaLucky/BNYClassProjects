@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Hands On</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body>
+
+    <form ng-app name="myForm" ng-init="myText= 'info@perscholas.org'">
+        Email:
+        <input type="email" name="myAddress" ng-model="myText" required>
+        <p>Edit the email address, and try to change the status</p>
+        <h1>Status</h1>
+        <p>Valid: {{myForm.myAddress.$valid}}
+            (if true, the value meets all criteria).
+        </p>
+        <p>Dirty: {{myForm.myAddress.$dirty}}
+            (if ture, the value has been changed).
+        </p>
+        <p>Touched: {{myForm.myAddress.$touched}}
+            (if ture, the field has been in focus).
+        </p>
+    </form>
+
+</body>

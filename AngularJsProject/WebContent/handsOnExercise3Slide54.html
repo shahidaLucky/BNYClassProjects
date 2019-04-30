@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Hands On Exercise Slide54</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body ng-app="myApp">
+    <h1>AngularJS Sample Application</h1>
+    <div ng-controller="myController">
+        <table>
+            <tr>
+                <td> Enter first Name : </td>
+                <td><input type="text" ng-model="firstName"><br></td>
+            </tr>
+            <tr>
+                <td> Enter last Name : </td>
+                <td><input type="text" ng-model="lastName"><br></td>
+            </tr>
+            <tr>
+                <td> Enter Fees : </td>
+                <td><input type="text" ng-model="fees"><br></td>
+            </tr>
+            <tr>
+                <td> Enter Subject : </td>
+                <td><input type="text" ng-model="subject"><br></td>
+            </tr>
+            <tr>
+                <td>Name is upper case:</td>
+                <td>{{firstName+ ' '+ lastName | uppercase}}</td>
+            </tr>
+            <tr>
+                <td>Name is lower case:</td>
+                <td>{{firstName+ ' '+ lastName | lowercase}}</td>
+            </tr>
+            <tr>
+                <td>Fees:</td>
+                <td>{{fees | currency:'$'}}</td>
+            </tr>
+            <tr>
+                <td>Subject:</td>
+                <td>
+                    <ul>
+                        <li ng-repeat="s in (subjects | filter: {name:subject}) | orderBy:marks">
+                            {{s.name+',marks:'+s.marks}}
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script>
+    var myApp = angular.module('myApp', []);
+
+    myApp.controller("myController", function ($scope) {
+
+        $scope.subjects = [{ name: 'Math', marks: '65' },
+        { name: 'Physics', marks: '75' },
+        { name: 'Chemistry', marks: '70' },
+        { name: 'Math', marks: '65' },
+        { name: 'Math', marks: '65' },
+        { name: 'Math', marks: '65' }];
+
+    });
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Expression Demo</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app> // we can use a single ng-app in one file
+    <h1>AngularJS Expression Demo: </h1>
+    <div ng-init="greet= 'Hello World!';
+    amount = 1000; rateOfInterest = 10.5; duration=10;
+    myArr = [100,200];
+    person = {firstName: 'Steve', lastName: 'Jobs'}">
+        {{ (amount * rateOfInterest * duration)/100}}<br>
+        {{myArr[1]}}<br>
+        {{person.firstName + " " + person.lastName}}
+    </div>
+    <div>
+        {{"Hello" + "World"}}<br>
+        {{100 + 100}}<br>
+        {{true + false}}<br>
+        {{10.2 + 10.2}}<br>
+    </div>
+</body>
+
+</html>

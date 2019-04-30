@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Hands On</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+<!--    Using Increse   ------>
+
+<body ng-app ng-init="count=0;step=1">
+    <div>
+        <h1 ng-mousemove="count=count+step">Increse by: {{step}}</h1>
+        <input type="number" ng-model="step"><br>
+        <h2>{{count}}</h2>
+
+        <h2 ng-show="count>=0">Counter is Positive</h2>
+        <h2 ng-show="count<0" style="color: red">Counter is Negative</h2>
+    </div>
+
+</body>
+
+</html>

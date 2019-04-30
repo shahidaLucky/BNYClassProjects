@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controller</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app="myNgApp">
+    <div ng-controller="myController">
+       The message from the controller:    {{message}}<br><br>
+       <div ng-repeat="l in languages">{{l}} is fun!</div>
+    </div>
+    <script>
+        var ngApp = angular.module('myNgApp', []);
+        ngApp.controller('myController', function ($scope) {
+            $scope.message = "Hello developers!";
+            $scope.languages = ['java', 'python', 'javaScript','ruby']
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular Js Application</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app>
+    <h1>First AngularJS Applictaion</h1>
+
+    Enter Numbers to Multiply:
+    <input type="text" ng-model="number1">x <input type="text" ng-model="number2">
+    =<span>{{number1 * number2}}</span><br><br>
+
+    Enter Numbers to Divide:
+    <input type="text" ng-model="number3"> / <input type="text" ng-model="number4">
+    =<span>{{number3 / number4}}</span><br><br>
+
+    Enter Numbers to Addition:
+    <input type="number" ng-model="number5"> + <input type="number" ng-model="number6">
+    =<span>{{number5 + number6}}</span><br><br>
+</body>
+
+</html>

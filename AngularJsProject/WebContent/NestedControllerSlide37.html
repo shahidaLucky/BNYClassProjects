@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Controller</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="personCtrl">
+
+        First Name: <input type="text" ng-model="firstNmae"><br>
+        Last Name: <input type="text" ng-model="lastNmae"><br>
+        Full Name: {{fullName ()}}
+    </div>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('personCtrl', function ($scope) {
+            $scope.firstName = "John";
+            $scope.lastName = "Doe";
+            $scope.fullName = function () {
+                //return $scope.firstName + " " + $scope.lastName[0];
+                // [0] used to see only the first letter of the last name
+                return $scope.firstName + " " + $scope.lastName.substring(0, 1);// using substring 
+            };
+        });
+    </script>
+</body>

@@ -1,0 +1,16 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Hands On</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+<!--    (1) Using expression inside HTML element    ------>
+<body ng-app="myApp" ng-init="0" ng-controller="myController"> 
+   <h1 ng-mousemove="count = count+1">Mouse Over Me!</h1>
+   <h2>{{count}}</h2>
+    
+</body>

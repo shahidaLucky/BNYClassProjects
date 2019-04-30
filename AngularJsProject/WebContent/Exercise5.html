@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <script src="js/angular.min.js"></script>
+<style>
+      button{ width:60px;}
+     </style>
+</head>
+
+<body ng-app="ngApp" ng-controller="studentController">
+ <h2>Student Form</h2>
+    <form name="form" ng-submit='submitStudentForm()'>
+    <table>
+     <tr>
+       <td>Enter id number:</td>
+       <td><input type='number' name='id' ng-model='newStudent.id' required></td>
+     </tr>
+     <tr>
+       <td>Enter name:</td>
+       <td><input type='text' name='name' ng-model='newStudent.name' required></td>
+     </tr>
+     <tr>
+       <td>Enter email:</td>
+       <td><input type='email' name='email' ng-model='newStudent.email'></td>
+     </tr>
+  </table>
+       <span ng-show="form.id.$error.required || form.name.$error.required">*ID/Name is required!</span>
+       <span ng-show="form.email.$error.email">*Invalid Email!</span><br>
+       <button>Submit</button>
+    </form>
+    <button ng-click='resetForm()'>Reset</button>
+    <script>
+         var app = angular.module("ngApp", []);
+         app.controller('studentController', function($scope) {
+              $scope.originalStudent = {
+               id: 1,
+               name: 'James Gosling',
+               email: 'jgosling@java.org'                    
+              };
+              $scope.newStudent = {
+               id: $scope.originalStudent.id,
+               name: $scope.originalStudent.name,
+               email: $scope.originalStudent.email
+              };
+              $scope.submitStudentForm = function(){
+               alert('id: '+$scope.newStudent.id+
+                '\nname: '+$scope.newStudent.name+
+                '\nemail: '+$scope.newStudent.email);
+              };
+              $scope.resetForm = function() {
+               $scope.newStudent.id = $scope.originalStudent.id;
+               $scope.newStudent.name = $scope.originalStudent.name;
+               $scope.newStudent.email = $scope.originalStudent.email;
+              };
+         });
+</script>
+</body>
+</html>

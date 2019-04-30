@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AngularJS Directives</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <h2>Modules </h2>
+        <h3>Adding Controller:</h3>
+        </h2>
+        How much is the 2019
+        {{ carMake + " " + carModel }} in today's market?
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myCtrl", function ($scope) {
+            $scope.carMake = "Audi";
+            $scope.carModel = "Q8";
+        });
+    </script>
+
+</body>
+
+</html>
