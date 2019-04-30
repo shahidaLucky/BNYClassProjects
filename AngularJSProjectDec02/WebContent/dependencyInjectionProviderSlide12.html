@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dependency Injection Silde 12 provider</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app="ngApp" ng-controller="ctrl">
+    <div>
+        Student Name: {{studentName}}<br>
+        Current Site: {{site}}
+    </div>
+
+</body>
+<script>
+    var ngApp = angular.module("ngApp", []);
+
+    ngApp.provider("student", function () {
+        this.site = ''
+
+        this.$get = function () {
+            var thisProv = this;
+            return {
+                name: function () {
+                    return "Young";
+                },
+                site: thisProv.site
+            }
+        }
+    });
+    ngApp.controller('ctrl', function ($scope, student) {
+        $scope.studentName = student.name();
+        $scope.site = student.site;
+    });
+
+    ngApp.config(function (studentProvider) {
+        studentProvider.site = "New York";
+    });
+
+
+</script>
+
+</html>

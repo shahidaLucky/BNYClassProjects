@@ -1,0 +1,53 @@
+<! DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Services Slide17 Custom Service</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app="mainApp">
+    <h3> AngularJS Service</h3>
+
+    <div ng-controller="Ctrl1">
+        <h1>Controller 1</h1>
+        {{tag}}
+    </div>
+    <div ng-controller="Ctrl2">
+        <h1>Controller 2</h1>
+        {{newTag}}
+    </div>
+
+</body>
+<script>
+    var mainApp = angular.module("mainApp", []);
+    mainApp.service('makeSpace', function () {
+        this.snakeCaseToSpace = function (input) {
+            let output = '';
+            for (let i = 0; i < input.length; i++) {
+                if (input[i] === input[i].toUpperCase()) {
+                    output += " " + input[i];
+                } else {
+                    output += input[i];
+                }
+            }
+            return output;
+        }
+        this.someotherfunction = function(){
+
+        }
+    });
+
+    mainApp.controller('Ctrl1', function ($scope, makeSpace) {
+        $scope.tag = makeSpace.snakeCaseToSpace('HelloBangladeshHello');
+        // Hello Bangladesh
+    });
+    mainApp.controller('Ctrl2', function ($scope, makeSpace) {
+        $scope.newTag = makeSpace.snakeCaseToSpace('AreYouSureAboutThis');
+        // Are You Sure
+    });
+</script>
+
+
+</html>

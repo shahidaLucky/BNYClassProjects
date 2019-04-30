@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dependency Injection Silde 12 provider</title>
+    <script src="js/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="customerCtrl">
+    <div>
+        My Url: {{myUrl}}
+    </div>
+
+</body>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('customerCtrl', function($scope, $location){
+        $scope.myUrl = $location.absUrl();
+    })
+
+</script>
+
+</html>
