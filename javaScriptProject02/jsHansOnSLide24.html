@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let myData = [];
+    for (let i = 1; i <= 10; i++) {
+        myData.push(1);
+    }
+
+    // Method: 1
+    // console.log(myData);
+    // let string = '';
+    // myData.forEach(function (value) {
+    //     string += value + ' ';
+    // });
+    // console.log(string);
+
+
+    // Method: 2 : Using Array method.
+    console.log(myData.join(" "));
+
+    while (true) {
+        // generating Random number between 0-12
+        let randomIndex = Math.floor(Math.random() * 12) + 0;
+        let v = prompt('Enter Number for Index: ' + randomIndex);
+        if (randomIndex >= 0 && randomIndex < 10) {
+            myData[randomIndex] = v;
+        } else {
+            break;
+        }
+    }
+    console.log(myData.join(" "));
+</script>
+
+</html>

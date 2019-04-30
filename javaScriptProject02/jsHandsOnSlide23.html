@@ -1,0 +1,40 @@
+<!--Write a program print-interval.html that asks the user to input two integers L and U
+    (representing the lower and upper limits of the interval), and print out all integers in the range L ≤ i < U separated by spaces. Notice that we include the lower limit, but exclude the upper limit.
+Ex:
+Please enter L: -5Please enter U: 10-5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9-->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+</body>
+
+<script>
+    let lowerLimit = prompt("Please enter lower limit:");
+    let upperLimit = prompt("Please enter a upper limit: ");
+    lowerLimit = parseInt(lowerLimit);
+    upperLimit = parseInt(upperLimit);
+    console.log(typeof lowerLimit, typeof upperLimit);
+
+    if (typeof lowerLimit === 'number' && typeof upperLimit === 'number') {
+        let string = '';
+        for (i = lowerLimit; i < upperLimit; i++) {
+            string += i + ' ';
+        }
+        console.log(string);
+    } else {
+        throw new Error("Some Inputs Are not Number");
+    }
+
+</script>
+
+</html>
