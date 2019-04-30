@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Movie Listing</title>
+</head>
+
+<body>
+    <input type="text" id="movie_search">
+    <div id="movieList"></div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    let apiKey = '8a6fb2ae';
+    $('#movie_search')
+        .on('change', function(){
+            //1. make a ajax request to server using input value. We are expecting JSON
+            //2. when the data is arriaved, print as a list on your page.
+            
+            $.ajax({
+                url: 'http://www.omdbapi.com/?apikey=8a6fb2ae&' + $(this).val(),
+            })
+            .done((res) => {
+                console.log(res);
+            })
+
+
+
+        });
+
+
+</script>
+
+</html>
