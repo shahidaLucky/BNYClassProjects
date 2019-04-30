@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+	#username{
+			border: none;
+			outline: none;
+			border-radius: 3px;
+			padding: 4px;
+		}	
+	#username: focus:invalid{
+	       border: solid 5px red;
+	}
