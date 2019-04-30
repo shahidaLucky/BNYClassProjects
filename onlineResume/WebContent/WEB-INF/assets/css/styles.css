@@ -1,0 +1,171 @@
+body {
+    background-color: #141414;
+    font-family: sans-serif;
+    color: gray;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* Header section */
+header {
+    width: 60%;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: right;
+}
+
+.social_icon {
+    padding: 0 5px;
+    color: #383838;
+}
+
+.social_icon:hover {
+    color: gray;
+}
+
+/* End of Header Section */
+
+#main_content {
+    background-color: #282828;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Basic Info Block */
+
+#basic_info_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name_image_container {
+    display: flex;
+}
+
+.name_image_container .profile_image, .name_image_container .name_header {
+    margin: 10px;
+}
+
+.name_header .title {
+    margin: 1px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.name_header .position {
+    margin: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #45A6D8;
+}
+
+.profile_image {
+    width: 100px;
+    height: 100px;
+    border: 2px solid gray;
+}
+
+.description {
+    padding: 15px;
+}
+
+.employee_details {
+    display: flex;
+}
+
+.employee_details span:first-child {
+    color: white;
+    text-align: right;
+    width: 120px;
+}
+
+.employee_details span:nth-child(2) {
+    margin-left: 5px;
+}
+
+#sub_content {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 10px;
+    padding: 20px;
+}
+
+.sub_content_title {
+    display: block;
+    background-color: #373737;
+    width: 400px;
+}
+
+.sub_content_title i {
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    padding: 2px;
+    text-align: center;
+    color: white;
+}
+
+.sub_content_title span {
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.employment i {
+    background-color: #50A5CD;
+}
+
+.history_header {
+    display: flex;
+    /*margin: 10px;*/
+}
+
+.history_header_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+    padding: 5px;
+}
+
+.history_header i {
+    background-color: #45A6D8;
+    width: 15px;
+    height: 15px;
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    padding: 2px;
+}
+
+.history_header div:nth-child(2) {
+    margin-left: 10px;
+}
+
+.history_header h2 {
+    color: white;
+}
+
+.education i {
+    background-color: #6CA633;
+}
+
+aside {
+    width: 150px !important;
+}
+
+.programming_skill .title {
+    margin: 15px;
+}
+
+.programming_skill progress {
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value] {
+    background-color: #45A6D8;
+}
