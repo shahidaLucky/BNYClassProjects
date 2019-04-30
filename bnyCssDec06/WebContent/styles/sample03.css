@@ -1,0 +1,11 @@
+div {
+  background-color: blue;
+  width: 100px;
+  height: 100px;
+}
+div p {
+  background-color: pink;
+  height: 100%;
+}
+
+/*# sourceMappingURL=sample03.css.map */

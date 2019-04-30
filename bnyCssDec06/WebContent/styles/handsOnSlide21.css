@@ -1,0 +1,86 @@
+@charset "ISO-8859-1";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+select {
+	font-family: inherit;
+}
+
+.terms {
+	font-size: 12px;
+	color: darkgrey;
+	padding: 2px;
+}
+
+form {
+	background: #053177;
+	padding: 10px 35px 10px 35px;
+	border-radius: 10px;
+}
+
+.input-container {
+	display: -ms-flexbox; /* IE10 */
+	display: flex;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.icon {
+	padding: 10px;
+	background: white;
+	color: dodgerblue;
+	min-width: 50px;
+	text-align: center;
+	border: 0px;
+}
+
+.input-wrapper {
+	border: 1px;
+}
+
+.input-field {
+	width: 100%;
+	border: 0px;
+	padding: 10px;
+	outline: none;
+}
+/*Adding validation with regular expression*/
+input:focus{
+	/*To remove highlighting when focused*/
+	outline-width: 0;
+	outline: none;
+}
+input:not(:placeholder-shown):invalid{
+	box-shadow: 1px 2px 10px red;
+}
+
+.input-container:focus-within {
+	border: 2px solid dodgerblue;
+}
+
+/* Set a style for the submit button */
+.btn {
+	background-color: dodgerblue;
+	color: white;
+	padding: 15px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+
+.btn:hover {
+	opacity: 1;
+}
+
+
+
+
+

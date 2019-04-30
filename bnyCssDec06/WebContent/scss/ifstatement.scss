@@ -1,0 +1,82 @@
+// ---------------slide 26---------------
+// .main_conatiner{
+//     width: 300px;
+//     height: 300px;
+//     @if 4<7 {
+//         background-color: red;
+//     }
+// }
+//---------------------------slide 27------------------------
+// .main_conatiner{
+//     width: 300px;
+//     height: 300px;
+//     @if 4<7 {
+//         background-color: red;
+//     }
+//     @if 5<9 {
+//         background-color: green;
+//     }
+// }
+//-------------------slide 28-------------------------------------------
+// .main_conatiner{
+//     width: 300px;
+//     height: 300px;
+//     $color:null;
+//     //first if
+//     @if 4<7 {
+//         background-color: red;
+//         color: red;
+//     }// this is dependent on the first @if
+//     @else{
+//         background-color: green;
+//     }
+//     //second if
+//     @if $color == red {
+//         padding: 20px;
+//     }//this is dependent on the second @if
+//     else{
+//         padding: 0;
+//     }
+// }
+//--------------------------slide29-----------------------------------
+.main_conatiner{
+    width: 300px;
+    height: 300px;
+    $color:null;
+    
+    @if 4==2 {
+        background-color: yellow;
+        color: yellow;
+    }
+    @else if 4 % 2 == 0{//even
+        background-color: red;
+        $color: red;
+    }
+    @else{//odd
+        background-color: green;
+        $color: green;
+    }
+    @if $color == red{
+        padding: 20px;
+    }
+    @else{
+        padding: 0;
+    }
+}
+//---------------------------slide 30----------------------------
+// .flex_container{
+//     width: 80%;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     background-color: orange;
+// }
+// .flex_item{
+//     width: 100px;
+//     height: 100px;
+//     text-align: center;
+//     background-color: aqua;
+// }
+// @for $i from 1 through 3{
+//     .item-#{$i}{order:i}
+// }

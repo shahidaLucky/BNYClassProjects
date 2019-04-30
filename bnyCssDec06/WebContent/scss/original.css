@@ -1,0 +1,13 @@
+div {
+  margin: 0;
+}
+div nav {
+  padding: 0;
+  display: flex;
+}
+
+p.active {
+  background-color: red;
+}
+
+/*# sourceMappingURL=original.css.map */

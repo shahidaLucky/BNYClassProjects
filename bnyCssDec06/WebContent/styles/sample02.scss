@@ -1,0 +1,23 @@
+
+    .main_container {
+        width: 200px;
+        height: 200px;
+        margin: 0%;
+        padding: 0%;
+        background:{
+            color: aqua;
+            image: url("j.png");
+        }
+        border: 12px solid{
+            color: red;
+        }
+        nav{
+            padding: 0;
+        ul{
+           
+            &:hover{
+                box-shadow: 1px 1px 10px red;
+            }
+        }
+    }
+}

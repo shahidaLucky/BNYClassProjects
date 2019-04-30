@@ -1,0 +1,5 @@
+.main_conatiner{
+    width: 300px;
+    height: 300px;
+    @if 4<7 {background-color: red;}
+}

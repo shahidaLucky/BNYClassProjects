@@ -1,0 +1,28 @@
+.flex_container {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-image: orange;
+}
+
+.flex_item {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  background-color: aqua;
+}
+
+.item-1 {
+  order: i;
+}
+
+.item-2 {
+  order: i;
+}
+
+.item-3 {
+  order: i;
+}
+
+/*# sourceMappingURL=ifstatement.css.map */

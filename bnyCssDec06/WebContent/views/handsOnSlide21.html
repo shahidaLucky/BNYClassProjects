@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Insert title here</title>
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="../styles/handsOnSlide21.css">
+	<!-- Add icon library -->
+	<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>
+	<body>
+		<form action="" style="max-width: 500px; margin: auto">
+		<h2>Forms with Icons</h2>
+		<div class="input-container">
+			<i class="fa fa-user icon"></i> 
+			<input class="input-field" type="text" placeholder="Username" name="usrnm" required autofocus pattern="[A-Za-z0-9]{5,20}">
+		</div>
+		
+		<div class="input-container">
+			<i class="fa fa-key icon"></i> <input class="input-field"
+				type="password" placeholder="Password" name="psw">
+		</div>
+
+
+		<div class="input-container">
+			<i class="fa fa-key icon"></i> <input class="input-field"
+				type="password" placeholder="Confirm Password" name="psw">
+		</div>
+
+		<div class="input-container">
+			<i class="fa fa-envelope icon"></i> <input class="input-field"
+				type="text" placeholder="Email" name="email">
+		</div>
+
+		<div class="input-container">
+			<input class="input-field" type="text" placeholder="First Name"
+				name="fname"> <input class="input-field" type="text"
+				placeholder="Last Name" name="lname">
+
+		</div>
+
+		<div class="input-container">
+			<select class="input-field" name='gender'>
+				<option value="" disabled selected>Gender</option>
+				<option value='male'>Male</option>
+				<option value='female'>Female</option>
+			</select>
+		</div>
+
+		<div class="input-container">
+			<input type="checkbox" name="checkbox" value="check" id="agree" /> <span
+				class="terms">I agree to the terms and conditions</span>
+		</div>
+
+		<div class="input-container">
+			<input type="checkbox" name="checkbox" value="check" id="agree" /> <span
+				class="terms">I want to receive news and information</span>
+		</div>
+		<button type="submit" class="btn">Register</button>
+	</form>
+		
+	</body>
+</html>

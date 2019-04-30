@@ -1,0 +1,7 @@
+@import "sass_second.scss";
+$className: active;
+$attribute: background;
+
+p.#{$className}{
+    #{$attribute}-color: red;
+}

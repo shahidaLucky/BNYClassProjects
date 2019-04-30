@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Slide 21 Hands-On</title>
+		<link rel="stylesheet"
+			  type="text/css"
+			  href="../styles/handsOnSlide21MyVersion.css">
+	<!-- Add icon library -->
+	</head>
+		<body>
+	<!-- Main container -->
+		<div>
+		<!-- Header section -->
+		<header>
+			<h2>Form with Icons</h2>
+		</header>
+			 <!--  Include the Profile form here -->
+		<div class="formContainer">
+	  <form>
+		 <table>
+		 <tr>
+		 	<td><input id="userName" type="text" name="userName" placeholder="Username" size="40" required pattern="[A-Za-z0-9]{5,20}"/></td>
+		 </tr><br>
+		 <tr>
+		 	<td><input id="text" type="password" name="password" placeholder="Choose your password" size="40" pattern="(?=.*/d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"/></td>
+		 </tr><br>
+		 <tr>
+		 	<td><input id="text" type="email"name="email" placeholder="Email" size="40" required pattern="(?=.*/d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"/></td>
+		  </tr><br>
+		 	 <tr>
+		 	  <td><input id="name" type="text" name="firstName" placeholder="FirstName"size= "15"required pattern="[A-Za-z][^-]" />
+		 	  <input id="name" type="text" name="lasttName" placeholder="LastName" size= "15" required pattern="[A-Za-z][^-]"/></td>
+		 	</tr><br>
+		 		
+		 	 <tr>
+		 	  <td><select id="name" type="text" name="Gender" placeholder="Gender" style="width:70%"  required >
+		 	  <option value="disable">Gender</option>
+		 	  <option value="Male">Male</option>
+		 	  <option value="Female">Female</option>
+		 	  </select>
+		 	  </td><br>
+		 	 
+		 	
+		</table>
+		 	
+		     <!-- for check box -->
+		      <input type="checkbox" name="agreement" required> I agree with the terms and conditions<br>
+		      <input type="checkbox" name="agreement" required> I want to receive the news and offers<br>
+		     
+		 	<input type="submit" type="submit" name="submit" value="Sign Up"/>
+		 	
+		 	
+		 </form>
+		 </div>
+			
+		</div>
+	</body>
+</html>
