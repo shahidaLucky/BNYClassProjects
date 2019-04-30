@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+span{
+	background-color: skyblue;
+	display: inline-block;
+}
+div{
+	background-color: blue;
+	width: 900px;
+	height:900px;
+    padding: 2%;
+}
+.headerContainer{
+	background-color: grey;
+	width: 800px;
+	height: 150px;
+	padding:1%;
+	margin: 2%;
+	
+}
+.bodyContainer{
+	background-color: grey;
+	width: 800px;
+	height: 500px;
+	padding:1%;
+	margin: 2%;
+    display: flex;
+}
