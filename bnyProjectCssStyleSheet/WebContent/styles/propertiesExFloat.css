@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+div{
+	text-align: center;
+	border: 2px dashed red;
+	width: 800px;
+	height: 400px;
+}
+#div1{
+	/*background-color: aqua;*/
+	background: linear-gradient(to left bottom, blue, pink);
+	box-shadow: 10px 10px 10px 1px rgba(0,0,0,0.2), -1em 0.04em olive;
+	float: left;
+	objet-fit: fill;
+  }
+#div2{
+	background-color: antiquewhite;
+	float: right;
+ }
+#div3{
+	background-color: blueviolet;
+	clear: both;
+ }
