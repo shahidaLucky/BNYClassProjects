@@ -1,0 +1,30 @@
+#image_conatiner{
+    display: flex;
+    background-color: beige;
+    align-items: center;
+    //margin: 1%;
+    padding: 1%;
+    //border-radius: 2%;
+    animation: pulse 5s infinite;
+    img{
+        //border:  15px solid black;
+        animation: bounceIn 5s;
+        padding: 20px;
+    }
+}
+#name_container{
+    background-image: url("../images/background.jpg");
+    padding: 10%;
+    width: 600px;
+    height: 300px;
+    border-radius: 5%;
+    animation:  fadeIn 5s infinite;
+
+}
+#recharge_link{
+    background-image: url("../images/background.jpg");
+    padding: 40px;
+    justify-content: center;
+    display: flex;
+    
+}
