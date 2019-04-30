@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Grid Home Page</title>
+<link rel="stylesheet" type="text/css" href="../styles/mainGrid.css">
+</head>
+<body>
+		<div class="menu_container" >
+		<div class="menu_item .more">
+                <p>Logo</p>
+            </div>
+		<div class="menu_item">
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+						<li><a href="#">Services</a></li>
+							<li><a href="#">Contact</a></li>
+			</ul>
+		</nav>
+		</div>
+		</div>
+	<div class="tutorial_container">
+		<div class="tutorial_intro">
+			<div class="intro_item">
+				<h1>Welcome Css Grid</h1>
+				<p>CSS Grid Layout is the most powerful layout system available
+					in CSS. It is a 2-dimensional system, meaning it can handle both
+					columns and rows, unlike flexbox which is largely a 1-dimensional
+					system. You work with Grid Layout by applying CSS rules both to a
+					parent element (which becomes the Grid Container) and to that
+					element's children (which become Grid Items).</p>
+			</div>
+			<div class="intro_item">
+			<h2><span style="color:red">Introduction</span></h2>
+				<p>Using a grid-view is very helpful when designing web pages.
+				 It makes it easier to place elements on the page.</p>
+				<p>Flexbox consists of various properties that helps us define
+					two types of boxes, flex containers and flex items. The flex
+					containers have one or more flex items and defines how these flex
+					items are position, order, and how they are wrapped. Flex items
+					have the content</p>
+				<p>A div container can be made a flex container by providing the
+					display property the value flex, when styling the container. Any
+					container inside is consider a flex item display: flex;</p>
+			</div>
+		</div>
+		<div class="sample_box">
+			<h3>Consider this example:</h3>
+			<p>In this example we have one div container with three direct
+				child.</p>
+			<div class="css_code">
+				<pre>
+                    <span class="selector_class">.flex_container</span>
+                    {
+                    <!--background-color: black;-->
+                        <span class="property">background-color</span>: <span
+						class="value">black</span>;
+                        <!--width: 40%;-->
+                        <span class="property">width</span>: <span
+						class="value">40</span><span class="unit">%</span>;
+                        <!--height: 350px;-->
+                        <span class="property">height</span>: <span
+						class="value">350</span><span class="unit">px</span>;
+                        <!--margin: 10px auto;-->
+                        <span class="property">margin</span>: <span
+						class="value">10</span><span class="unit">px</span> <span
+						class="value">auto</span>;
+                        <!--color: black;-->
+                        <span class="property">color</span>: <span
+						class="value">black</span>;
+                    
+                    }
+                    <span class="selector_class">.flex_item</span>
+                    {
+                        <!--background-color: beige;-->
+                        <span class="property">background-color</span>: <span
+						class="value">beige</span>;
+                        <!--width: 100px;-->
+                        <span class="property">width</span>: <span
+						class="value">100</span><span class="unit">px</span>;
+                        <!--height: 100px;-->
+                        <span class="property">height</span>: <span
+						class="value">100</span><span class="unit">px</span>;
+                        <!--text-align: center;-->
+                        <span class="property">text-align</span>: <span
+						class="value">center</span>;
+                        <!--font-size: 60px;-->
+                        <span class="property">font-size</span>: <span
+						class="value">60</span><span class="unit">px</span>;
+                    }
+                </pre>
+			</div>
+			<div class="code_illustration">
+				<div class="flex_container_without">
+					<div class="flex_item_without">1</div>
+					<div class="flex_item_without">2</div>
+					<div class="flex_item_without">3</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sample_box">
+			<h3>Let's apply flex</h3>
+			<p>To make the blaxk box a flex container, we just need to apply
+				the display: flex;</p>
+			<div class="css_code">
+				<pre>
+                    <span class="selector_class">.flex_container</span>
+                    {
+                    <!--background-color: black;-->
+                        <span class="property">background-color</span>: <span
+						class="value">black</span>;
+                        <!--display: flex;-->
+                        <span class="property">display</span>: <span
+						class="value">flex</span>;
+                        <!--width: 40%;-->
+                        <span class="property">width</span>: <span
+						class="value">40</span><span class="unit">%</span>;
+                        <!--height: 350px;-->
+                        <span class="property">height</span>: <span
+						class="value">350</span><span class="unit">px</span>;
+                        <!--margin: 10px auto;-->
+                        <span class="property">margin</span>: <span
+						class="value">10</span><span class="unit">px</span> <span
+						class="value">auto</span>;
+                        <!--color: black;-->
+                        <span class="property">color</span>: <span
+						class="value">black</span>;
+                    
+                    }
+                    <span class="selector_class">.flex_item</span>
+                    {
+                        <!--background-color: beige;-->
+                        <span class="property">background-color</span>: <span
+						class="value">beige</span>;
+                        <!--width: 100px;-->
+                        <span class="property">width</span>: <span
+						class="value">100</span><span class="unit">px</span>;
+                        <!--height: 100px;-->
+                        <span class="property">height</span>: <span
+						class="value">100</span><span class="unit">px</span>;
+                        <!--text-align: center;-->
+                        <span class="property">text-align</span>: <span
+						class="value">center</span>;
+                        <!--font-size: 60px;-->
+                        <span class="property">font-size</span>: <span
+						class="value">60</span><span class="unit">px</span>;
+                    }
+                </pre>
+			</div>
+			<div class="code_illustration">
+				<div class="flex_container">
+					<div class="flex_item">1</div>
+					<div class="flex_item">2</div>
+					<div class="flex_item">3</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
