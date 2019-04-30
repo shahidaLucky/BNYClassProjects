@@ -1,0 +1,95 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Executing a Function on Change Event in jQuery</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+  
+  var arrayVendors = [];
+            for (i = 0; i <= 10; i++) {
+                arrayVendors[i] = "BNYM Vendor" + i;
+            }
+            console.log(arrayVendors);
+            console.log(arrayVendors.length);
+
+       
+ $(document).ready(function () {
+     for(i=0; i<=10; i++){
+         $("#vendorTable").append("<tr><td>" +i+ "</td><td>" +arrayVendors[i] + "</td></tr>");
+     }
+    
+         
+
+            //$("vendor").action();
+            // $( "#vendor" ).append("<option>vendor1</option>");
+            //  $( "#vendor" ).append("<option>vendor2</option>");
+            //   $( "#vendor" ).append("<option>vendor3</option>");
+
+         
+
+            for (i = 0; i <= 25; i++) {
+                //var vVendorName = "BNYM" + i;
+                $("#vendor").append("<option>" + arrayVendors[i] + "</option>");
+            }
+
+            $("#city").change(function () {
+                var selectedOption = $(this).find(":selected").val(); // method chain
+                alert("You have selected - " + selectedOption);
+            });
+            $("#town").change(function () {
+                var selectedOption = $(this).find(":selected").val(); // method chain
+                alert("You have selected - " + selectedOption);
+            });
+            $("#vendor").change(function () {
+                var selectedOption = $(this).find(":selected").val(); // method chain
+                alert("You have selected - " + selectedOption);
+            });
+        });
+
+
+    </script>
+</head>
+<!--arrayVendor = [vendor1, vendro2, vendor3, vendor4, vendor99, venfor100]-->
+
+<body>
+    <form>
+        <label>City:</label>
+        <select id="city">
+            <option>London</option>
+            <option>Paris</option>
+            <option>New York</option>
+        </select>
+        <label>Town:</label>
+        <select id="town">
+            <option>Mahattan</option>
+            <option>Brooklyn</option>
+            <option>Bronx</option>
+        </select>
+        <label>Vendor:</label>
+        <select id="vendor">
+
+        </select>
+    </form>
+
+    <div id="divTable">
+        <table id="vendorTable">
+           
+            <tr>
+                <th>ID</th>
+                <th>Vendor Name</th>
+            </tr>
+              <tr>
+                <td></td><br>
+                <td></td>
+            </tr>
+        
+
+    
+
+        </table>
+    </div>
+    <p><strong>Note:</strong> Select any value from the dropdown select and see the result.</p>
+</body>
+
+</html>
