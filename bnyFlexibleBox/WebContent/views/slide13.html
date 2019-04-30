@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>FlexBox</title>
+		<style>
+		
+		
+		.flex-container{
+		height: 400px;
+		background-color: skyblue;
+	    display: flex;
+	    justify-content: left-end;
+	    flex-wrap: wrap;
+	    align-content: space-around;
+	    /*flex-flow: wrap row-reverse;*/
+	    flex-direction: column;
+	  
+		}
+		.flex_item{
+	    width: 200px;
+		height: 200px;
+		background-color: grey;
+		display: flex;
+		justify-content: space-around;
+		}
+		.flex_itemA{
+		background-color: pink;      
+		}
+		</style>
+	</head>
+	<body>
+		
+		<div class="flex-container">
+			<div class="flex_item">
+				1 
+			</div>
+			
+			<div class="flex_item flex_itemA">
+				2
+			</div>
+		
+			<div class="flex_item">
+				3
+			</div>
+			<div class="flex_item flex_itemA">
+				4
+			</div>
+			<div class="flex_item">
+				5
+			</div>
+			<div class="flex_item flex_itemA">
+				6
+			</div>
+			<div class="flex_item">
+				1 
+			</div>
+			
+			<div class="flex_item flex_itemA">
+				2
+			</div>
+		
+			<div class="flex_item">
+				3
+			</div>
+			<div class="flex_item flex_itemA">
+				4
+			</div>
+			<div class="flex_item">
+				5
+			</div>
+			<div class="flex_item flex_itemA">
+				6
+			</div>
+			
+			
+		</div>
+	</body>
+</html>
